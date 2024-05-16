@@ -104,6 +104,8 @@
             background-color: #c82333;
         }
 
+        
+
         /* Keyframe animations */
         @keyframes fadeIn {
             from {
@@ -150,15 +152,19 @@
       
 
 
-            @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
         .container {
             width: 90%;
         }
         
         /* Adjust the welcome message text */
         .welcome-message {
-            font-size: 24px;
+        top: 55%; /* Reset the top position */
+        margin-top: 50px; /* Add margin to shift the message down */
+        font-size: 27px;
         }
+
+        
 
         /* Make buttons wrap into columns */
         .nav {
@@ -172,15 +178,17 @@
 
 
         #modeToggleBtn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: transparent;
-            border: none;
-            color: #fff;
-            font-size: 24px;
-            cursor: pointer;
-            outline: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 0px; /* Optional margin for better spacing */
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        outline: none;
+        z-index: 999; /* Ensure the button is above other content */
         }
 
 
@@ -211,16 +219,16 @@
         }
 
         .light-mode * {
-            color: #000; /* Ensure all text inside light mode elements is black */
+            color: #ff0000; /* Ensure all text inside light mode elements is black */
         }
 
         .light-mode .nav, .light-mode footer {
-            background-color: #ffffffa6;
+            background-color: #ffffff;
             color: #000;
         }
 
         .light-mode header {
-            background-color: #ffffffa6;
+            background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
