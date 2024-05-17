@@ -232,14 +232,14 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        .light-mode .clear-button, .light-mode .nav button {
-            background-color: #007bff;
+        .light-mode .clear-button, .light-mode .nav button, .cola button {
+            background-color: #f0f561;
             color: #000;
             
         }
 
-        .light-mode .clear-button:hover, .light-mode .nav button:hover {
-            background-color: #0056b3;
+        .light-mode .clear-button:hover, .light-mode .nav button:hover, .cola button:hover {
+            background-color: #f6e900;
         }
 
 
@@ -300,8 +300,11 @@
 
     <div class="container" id="datasetContainer" style="display: none;">
         <h2>Download Datasets</h2>
-        <button onclick="downloadPhishingDataset()">Phishing Dataset</button>
+        <div class="cola">
+            <button onclick="downloadPhishingDataset()">Phishing Dataset</button>
         <button onclick="downloadPaymentFraudDataset()">Payment Fraud Dataset</button>
+        </div>
+        
     </div>
 
     <footer>
