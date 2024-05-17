@@ -219,10 +219,10 @@
         }
 
         .light-mode * {
-            color: #ff0000; /* Ensure all text inside light mode elements is black */
+            color: #000000; /* Ensure all text inside light mode elements is black */
         }
 
-        .light-mode .nav, .light-mode footer {
+        .light-mode .nav, .light-mode footer, .light-mode .container, .light-mode body {
             background-color: #ffffff;
             color: #000;
         }
@@ -232,16 +232,17 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        .light-mode .clear-button, .light-mode .nav button, .light-mode .cola button {
+        .light-mode .clear-button, .light-mode .nav button, .light-mode .cola button, .light-mode .hexa button {
             background-color: #f0f561;
             color: #000;
             
         }
 
-        .light-mode .clear-button:hover, .light-mode .nav button:hover, .light-mode .cola button:hover {
+        .light-mode .clear-button:hover, .light-mode .nav button:hover, .light-mode .hexa button:hover {
             background-color: #f6e900;
         }
-
+        
+        
 
 
     </style>
@@ -300,7 +301,7 @@
 
     <div class="container" id="datasetContainer" style="display: none;">
         <h2>Download Datasets</h2>
-        <div class="cola">
+        <div class="hexa">
             <button onclick="downloadPhishingDataset()">Phishing Dataset</button>
         <button onclick="downloadPaymentFraudDataset()">Payment Fraud Dataset</button>
         </div>
@@ -463,7 +464,11 @@ function showyoutube(){
         });
 
 
-        
+        if (!isDarkMode) {
+        body.style.backgroundImage = 'url(https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-flat-network-security-banner-image_187258.jpg)';
+    } else {
+        body.style.backgroundImage = 'url(https://assets-global.website-files.com/61329f1ed969e70039c05b5e/613f9ba9234525e3bcbfd477_Security-BG.jpg)';
+    }
 
 
         isDarkMode = !isDarkMode;
