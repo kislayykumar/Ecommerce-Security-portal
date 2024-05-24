@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Security portal</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/164/164617.png">
     <style>
         body {
             margin: 0;
@@ -299,6 +301,12 @@
         <div id="outputright"></div>
     </div>
 
+    <div class="container" id="videoyoutube">
+        <h2>Youtube Video</h2>
+        <iframe width="420" height="345" src="https://www.youtube.com/embed/Si4HpHb_xxs?autoplay=1&mute=1" >
+        </iframe>
+    </div>
+
     <div class="container" id="datasetContainer" style="display: none;">
         <h2>Download Datasets</h2>
         <div class="hexa">
@@ -320,14 +328,17 @@
     document.getElementById("phishingContainer").style.display = "block";
     document.getElementById("paymentFraudContainer").style.display = "none";
     document.getElementById("datasetContainer").style.display = "none"; // Hide dataset container
+    document.getElementById("videoyoutube").style.display = "none";
     document.querySelector('.welcome-message').style.display = 'none'; // Hide welcome message
     document.getElementById('homeButton').style.display = 'block'; // Show Home button
     document.getElementById('outputright').innerHTML = ''; // Clear payment fraud result
+    
 }
 
 function showDataset() {
     document.getElementById("datasetContainer").style.display = "block";
     document.getElementById("phishingContainer").style.display = "none";
+    document.getElementById("videoyoutube").style.display = "none";
     document.getElementById("paymentFraudContainer").style.display = "none";
     document.querySelector('.welcome-message').style.display = 'none';
     document.getElementById('homeButton').style.display = 'block';
@@ -336,6 +347,7 @@ function showDataset() {
 function showPaymentFraud() {
     document.getElementById("phishingContainer").style.display = "none";
     document.getElementById("paymentFraudContainer").style.display = "block";
+    document.getElementById("videoyoutube").style.display = "none";
     document.getElementById("datasetContainer").style.display = "none"; // Hide dataset container
     document.querySelector('.welcome-message').style.display = 'none'; // Hide welcome message
     document.getElementById('homeButton').style.display = 'block'; // Show Home button
@@ -345,13 +357,20 @@ function showPaymentFraud() {
 function goHome() {
     document.getElementById("phishingContainer").style.display = "none";
     document.getElementById("paymentFraudContainer").style.display = "none";
+    document.getElementById("videoyoutube").style.display = "none";
     document.getElementById("datasetContainer").style.display = "none"; // Hide dataset container
     document.querySelector('.welcome-message').style.display = 'block'; // Show welcome message
     document.getElementById('homeButton').style.display = 'none'; // Hide Home button
 }
 
 function showyoutube(){
-    window.location.href = "https://www.youtube.com/watch?v=Si4HpHb_xxs";
+    //window.location.href = "https://www.youtube.com/watch?v=Si4HpHb_xxs";
+    document.getElementById("videoyoutube").style.display = "block";
+    document.getElementById("phishingContainer").style.display = "none";
+    document.getElementById("paymentFraudContainer").style.display = "none";
+    document.querySelector('.welcome-message').style.display = 'none';
+    document.getElementById('homeButton').style.display = 'block';
+    document.getElementById("datasetContainer").style.display = "none";
 }
 
 
